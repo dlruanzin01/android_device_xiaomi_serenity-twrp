@@ -1,0 +1,11 @@
+# Fstab
+ro.postinstall.fstab.prefix=/system
+
+# USB MTP
+ro.adb.secure=0
+ro.debuggable=1
+persist.sys.usb.config=adb
+sys.usb.config=mtp,adb
+sys.usb.controller=musb-hdrc.0.auto
+
+
