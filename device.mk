@@ -6,7 +6,7 @@
 #
 
 LOCAL_PATH := device/redmi/serenity
-# A/B
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -14,12 +14,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_system=true
 
 # Boot control HAL
-
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     libhealthd.$(PRODUCT_PLATFORM)
  
-# Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl-1.2 \
     android.hardware.boot@1.2-impl.recovery \
@@ -39,8 +37,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl.ums9230
+
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
