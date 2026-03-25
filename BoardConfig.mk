@@ -64,8 +64,9 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 400
 
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_PREBUILT_DTBIMAGE_DIR := device/redmi/serenity/prebuilt
-BOARD_PREBUILT_DTBIMAGE := device/redmi/serenity/prebuilt/dtb.img
+BOARD_PREBUILT_DTBIMAGE := $(BOARD_PREBUILT_DTBIMAGE_DIR)/dtb.img
 
 # MKBOOTIMG from original vendor_boot
 BOARD_VENDOR_BASE := 0x00000000
