@@ -47,8 +47,8 @@ jobs:
       run: |
         cd twrp
         source build/envsetup.sh
-        lunch twrp_serenity-eng
-        mka recoveryimage -j4
+        source build/envsetup.sh && export ALLOW_MISSING_DEPENDENCIES=true && lunch omni_serenity-eng
+        make recoveryimage -j4
 
     - name: Upload Recovery
       uses: actions/upload-artifact@v4
