@@ -47,7 +47,8 @@ jobs:
       run: |
         cd twrp
         source build/envsetup.sh
-        source build/envsetup.sh && export ALLOW_MISSING_DEPENDENCIES=true && lunch omni_serenity-eng
+export ALLOW_MISSING_DEPENDENCIES=true
+lunch twrp_serenity-eng
         make recoveryimage -j4
 
     - name: Upload Recovery
